@@ -28,27 +28,24 @@
 <body class="leading-normal tracking-normal text-gray-900" style="font-family: 'Source Sans Pro', sans-serif;">
 <div class="h-screen pb-14 bg-right bg-cover" style="background-image:url('../assets/bg.svg');">
 	<!--Nav-->
-	<div class="w-full container mx-auto p-6">
-		<div class="side bar fixed top-0 bottom-0 lg:left-0 p-2 w-[300px] overflow-y-auto text-center bg-gray-900">
-			<div class="text-gray-100 text-xl">
-				<div class="p-2.5 mt-1 flex items-center">
-					<i class="bi bi-app-indicator px-2 py-1 bg-blue-600 rounded-md"></i>
-					<h1 class="font-bold text-gray-200 text-[15px] ml-3">Side menu</h1>
-					<i class="bi bi-x ml-20 cursor-pointer"></i>
-					<hr class="my-2 text-gray-600">
-					<div class="p-2.5 mt-3 flex items.center rounded-md px-4 duration-300 cursor-pointer bg-gray-700">
-
-					</div>
-				</div>
-			</div>
-		</div>
+	<header class="w-full container mx-auto p-6">
+<!--		<div class="side bar fixed top-0 bottom-0 lg:left-0 p-2 w-[300px] overflow-y-auto text-center bg-gray-900">-->
+<!--			<div class="text-gray-100 text-xl">-->
+<!--				<div class="p-2.5 mt-1 flex items-center">-->
+<!--					<i class="bi bi-app-indicator px-2 py-1 bg-blue-600 rounded-md"></i>-->
+<!--					<h1 class="font-bold text-gray-200 text-[15px] ml-3">Side menu</h1>-->
+<!--					<i class="bi bi-x ml-20 cursor-pointer"></i>-->
+<!--					<hr class="my-2 text-gray-600">-->
+<!--					<div class="p-2.5 mt-3 flex items.center rounded-md px-4 duration-300 cursor-pointer bg-gray-700"></div>-->
+<!--				</div>-->
+<!--			</div>-->
+<!--		</div>-->
 		<div class="w-full flex items-center justify-between">
 			<a class="flex items-center text-indigo-400 no-underline hover:no-underline font-bold text-2xl lg:text-4xl"  href="#">
 <!--				<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 22 22" stroke-width="1.5" stroke="currentColor" class="h-8 text-indigo-600 pr-2">-->
 <!--					<path stroke-linecap="round" stroke-linejoin="round" d="M17.982 18.725A7.488 7.488 0 0 0 12 15.75a7.488 7.488 0 0 0-5.982 2.975m11.963 0a9 9 0 1 0-11.963 0m11.963 0A8.966 8.966 0 0 1 12 21a8.966 8.966 0 0 1-5.982-2.275M15 9.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />-->
 <!--				</svg>-->
-				<i class="bi bi-filter-left w-10"></i>
-				<span class="text-indigo-600">David Lozano Cabeza</span>
+				<i class="bi bi-filter-left w-10 text-indigo-600"></i>
 			</a>
 
 			<div class="flex w-1/2 justify-end content-center">
@@ -60,11 +57,10 @@
 				</a>
 			</div>
 		</div>
-
-	</div>
+	</header>
 
 	<!--Main-->
-	<div class="container pt-24 md:pt-48 px-6 mx-auto flex flex-wrap flex-col md:flex-row items-center">
+	<main class="container pt-24 md:pt-48 px-6 mx-auto flex flex-wrap flex-col md:flex-row items-center">
 
 		<!--Left Col-->
 		<div class="flex flex-col w-full xl:w-2/5 justify-center lg:items-start overflow-y-hidden">
@@ -88,19 +84,49 @@
 		</div>
 
 		<!-- Progress bars -->
-		<div class="w-full xl:w-3/5 md:w-2/3 mx-auto">
+		<div class="w-full xl:w-3/5 md:w-2/3 mx-auto fade-in">
 			<h2 class="text-indigo-600 text-2xl lg:text-4xl font-bold flex flex-col items-center">Progress bars</h2>
 			<span>Java</span>
 			<div class="w-full bg-gray-700 rounded-full h-2.5">
-				<div class="bg-blue-600 h-2.5 rounded-full" style="width: 45%"></div>
+				<div class="bg-blue-600 h-2.5 rounded-full" style="width: 72%"></div>
+			</div>
+
+			<span>Kotlin</span>
+			<div class="w-full bg-gray-700 rounded-full h-2.5">
+				<div class="bg-blue-600 h-2.5 rounded-full" style="width: 93%"></div>
+			</div>
+
+			<span>React</span>
+			<div class="w-full bg-gray-700 rounded-full h-2.5">
+				<div class="bg-blue-600 h-2.5 rounded-full" style="width: 62%"></div>
+			</div>
+
+			<span>Spring boot</span>
+			<div class="w-full bg-gray-700 rounded-full h-2.5">
+				<div class="bg-blue-600 h-2.5 rounded-full" style="width: 67%"></div>
+			</div>
+
+			<span>JavaScript</span>
+			<div class="w-full bg-gray-700 rounded-full h-2.5">
+				<div class="bg-blue-600 h-2.5 rounded-full" style="width: 87%"></div>
+			</div>
+
+			<span>Laravel</span>
+			<div class="w-full bg-gray-700 rounded-full h-2.5">
+				<div class="bg-blue-600 h-2.5 rounded-full" style="width: 52%"></div>
+			</div>
+
+			<span>MySQL</span>
+			<div class="w-full bg-gray-700 rounded-full h-2.5">
+				<div class="bg-blue-600 h-2.5 rounded-full" style="width: 83%"></div>
 			</div>
 		</div>
 
 		<!--Footer-->
-		<div class="w-full pt-16 pb-6 text-sm text-center md:text-left fade-in">
+		<footer class="w-full pt-16 pb-6 text-sm text-center md:text-left fade-in">
 			<a class="text-gray-500 no-underline hover:no-underline" href="https://www.cifpfbmoll.eu/">&copy; DAW DUAL - DIW 2025</a>
-		</div>
-	</div>
+		</footer>
+	</main>
 </div>
 
   <!-- jQuery if you need it
