@@ -27,12 +27,22 @@
 </head>
 <body class="leading-normal tracking-normal text-gray-900" style="font-family: 'Source Sans Pro', sans-serif;">
 	<div class="h-screen pb-14 bg-right bg-cover" style="background-image:url('../assets/bg.svg');">
+		<!-- Sidebar -->
+		<div id="sidebar" class="fixed top-0 left-0 w-64 h-full bg-gray-900 text-white transform -translate-x-full transition-transform duration-300 ease-in-out z-50">
+			<button onclick="toggleSidebar()" class="absolute top-4 right-4 text-white text-2xl hover:opacity-70 cursor-pointer">&times;</button>
+			<nav class="mt-16 flex flex-col space-y-4">
+				<a href="#pg-bars" class="block py-2 px-6 hover:bg-gray-700">Skills</a>
+				<a href="#projects" class="block py-2 px-6 hover:bg-gray-700">Projects</a>
+				<a href="#contact" class="block py-2 px-6 hover:bg-gray-700">Contact</a>
+			</nav>
+		</div>
+
 		<!--Nav-->
 		<header class="w-full container mx-auto p-6">
 			<div class="w-full flex items-center justify-between">
-				<a class="flex items-center text-indigo-400 no-underline hover:no-underline font-bold text-2xl lg:text-4xl"  href="#">
+				<button onclick="toggleSidebar()" class="flex items-center text-indigo-400 font-bold text-2xl lg:text-4xl hover:opacity-70 cursor-pointer">
 					<i class="bi bi-filter-left w-10 text-indigo-600"></i>
-				</a>
+				</button>
 
 				<div class="flex w-1/2 justify-end content-center">
 					<a class="inline-block text-blue-300 no-underline hover:text-indigo-800 hover:text-underline text-center h-10 p-2 md:h-auto md:p-4" data-tippy-content="@twitter_handle" href="https://twitter.com/intent/tweet?url=#">
@@ -114,7 +124,8 @@
 						<div class="min-w-full flex">
 							<img src="../assets/tuneParts.png" class="w-7/10 object-cover" alt="Imagen 1">
 							<div class="w-3/10 bg-gray-200 p-4  flex items-center justify-center flex-col">
-								<p class="text-center text-gray-900 font-bold">Tune parts</p>
+								<!-- B-Stores link because this project doesn't have a link -->
+								<a href="https://play.google.com/store/apps/details?id=com.inventario.barcelo&hl=es_419" class="text-center text-gray-900 font-bold">Tune parts</a>
 								<p>A car and car parts selling website, made with spring-boot and a JS front end</p>
 							</div>
 						</div>
@@ -122,7 +133,8 @@
 						<div class="min-w-full flex">
 							<img src="../assets/adalmoWebSite.png" class="w-7/10 object-cover" alt="Imagen 2">
 							<div class="w-3/10 bg-gray-200 p-4  flex items-center justify-center flex-col">
-								<p class="text-center text-gray-900 font-bold">Adalmo</p>
+								<!-- B-Stores link because this project doesn't have a link -->
+								<a href="https://play.google.com/store/apps/details?id=com.inventario.barcelo&hl=es_419" class="text-center text-gray-900 font-bold">Adalmo</a>
 								<p>A static website, made JS, HTML and CSS, made for the Hackathon challenge</p>
 							</div>
 						</div>
@@ -130,7 +142,7 @@
 						<div class="min-w-full flex">
 							<img src="../assets/bstores.png" class="w-7/10 object-cover" alt="Imagen 3">
 							<div class="w-3/10 bg-gray-200 p-4  flex items-center justify-center flex-col">
-								<p class="text-center text-gray-900 font-bold">B-Stores</p>
+								<a href="https://play.google.com/store/apps/details?id=com.inventario.barcelo&hl=es_419" class="text-center text-gray-900 font-bold">B-Stores</a>
 								<p>An android app for Barceló Hotel Group, made with Kotlin and spring-boot, designed for registering inventories, requests, losses, etc...</p>
 							</div>
 						</div>
@@ -192,6 +204,11 @@
 
 		function prevSlide() {
 			showSlide(currentIndex - 1);
+		}
+
+		function toggleSidebar() {
+			const sidebar = document.getElementById("sidebar");
+			sidebar.classList.toggle("-translate-x-full");
 		}
 	</script>
 </body>
