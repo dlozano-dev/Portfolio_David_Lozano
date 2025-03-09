@@ -56,8 +56,8 @@
 				<p class="text-blue-400 font-bold pb-8 lg:pb-6 text-center md:text-left fade-in">My information:</p>
 				<div class="flex w-full justify-center md:justify-start pb-24 lg:pb-0 fade-in">
 					<a class="h-12 pr-4 bounce-top-icons hover:text-indigo-800" href="#pg-bars">Skills</a>
-					<a class="h-12 pr-4 bounce-top-icons hover:text-indigo-800" href="#">Projects</a>
-					<a class="h-12 bounce-top-icons hover:text-indigo-800" href="#">Contact</a>
+					<a class="h-12 pr-4 bounce-top-icons hover:text-indigo-800" href="#projects">Projects</a>
+					<a class="h-12 bounce-top-icons hover:text-indigo-800" href="#contact">Contact</a>
 				</div>
 			</div>
 
@@ -106,7 +106,48 @@
 				</div>
 			</div>
 
-			<div class="py-8 lg:py-16 px-4 mx-auto max-w-screen-md">
+			<!-- Carousel -->
+			<div id="projects" class="relative w-full mx-[10vw] mt-[10vh] slide-in-bottom-slide">
+				<div class="overflow-hidden relative">
+					<div class="flex transition-transform duration-500 ease-in-out" id="carousel">
+						<!-- Slide 1 -->
+						<div class="min-w-full flex">
+							<img src="../assets/tuneParts.png" class="w-7/10 object-cover" alt="Imagen 1">
+							<div class="w-3/10 bg-gray-200 p-4  flex items-center justify-center flex-col">
+								<p class="text-center text-gray-900 font-bold">Tune parts</p>
+								<p>A car and car parts selling website, made with spring-boot and a JS front end</p>
+							</div>
+						</div>
+						<!-- Slide 2 -->
+						<div class="min-w-full flex">
+							<img src="../assets/adalmoWebSite.png" class="w-7/10 object-cover" alt="Imagen 2">
+							<div class="w-3/10 bg-gray-200 p-4  flex items-center justify-center flex-col">
+								<p class="text-center text-gray-900 font-bold">Adalmo</p>
+								<p>A static website, made JS, HTML and CSS, made for the Hackathon challenge</p>
+							</div>
+						</div>
+						<!-- Slide 3 -->
+						<div class="min-w-full flex">
+							<img src="../assets/bstores.png" class="w-7/10 object-cover" alt="Imagen 3">
+							<div class="w-3/10 bg-gray-200 p-4  flex items-center justify-center flex-col">
+								<p class="text-center text-gray-900 font-bold">B-Stores</p>
+								<p>An android app for Barceló Hotel Group, made with Kotlin and spring-boot, designed for registering inventories, requests, losses, etc...</p>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Controls -->
+				<button onclick="prevSlide()" class="absolute top-1/2 left-2 transform -translate-y-1/2 bg-gray-800 text-white p-2 rounded-full transition-opacity duration-300 hover:opacity-70 cursor-pointer">
+					&#10094;
+				</button>
+				<button onclick="nextSlide()" class="absolute top-1/2 right-2 transform -translate-y-1/2 bg-gray-800 text-white p-2 rounded-full transition-opacity duration-300 hover:opacity-70 cursor-pointer">
+					&#10095;
+				</button>
+			</div>
+
+			<!-- Contact form -->
+			<div id="contact" class="py-8 lg:py-16 px-4 mx-auto max-w-screen-md">
 				<h2 class="mb-4 text-4xl tracking-tight font-extrabold text-center text-gray-900">Contact Me</h2>
 				<p class="mb-8 lg:mb-16 font-light text-center text-gray-500 sm:text-xl">Any questions about my current employment status? my latest jobs? hiring intention? You can contact me with any questions via email.</p>
 				<form action="#" class="space-y-8">
@@ -132,5 +173,26 @@
 			</footer>
 		</main>
 	</div>
+
+	<script>
+		let currentIndex = 0;
+
+		function showSlide(index) {
+			const carousel = document.getElementById('carousel');
+			const totalSlides = carousel.children.length;
+			if (index >= totalSlides) currentIndex = 0;
+			else if (index < 0) currentIndex = totalSlides - 1;
+			else currentIndex = index;
+			carousel.style.transform = `translateX(-${currentIndex * 100}%)`;
+		}
+
+		function nextSlide() {
+			showSlide(currentIndex + 1);
+		}
+
+		function prevSlide() {
+			showSlide(currentIndex - 1);
+		}
+	</script>
 </body>
 </html>
